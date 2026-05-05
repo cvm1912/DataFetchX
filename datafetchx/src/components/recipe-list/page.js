@@ -1,9 +1,7 @@
 import {
   Card,
   CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
+
 } from "@/components/ui/card";
 import Link from "next/link";
 
@@ -17,13 +15,13 @@ export default function RecipeList({ recipes }) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {recipes && recipes.length > 0 ? (
           recipes.map((recipe) => (
-            <Link key={recipe.id} href={`/recipe/${recipe.id}`}>
+            <Link key={recipe.id} href={`/recipe-list/${recipe.id}`}>
               <Card>
                  <CardContent className="w-full h-full overflow-hidden">
                     <img
                       src={recipe.image}
                       alt={recipe.name}
-                      className="w-full h-48 object-cover rounded-md"
+                      className="w-full h-full object-cover rounded-md"
                     />    
                  </CardContent>
                  <div className="p-4">
