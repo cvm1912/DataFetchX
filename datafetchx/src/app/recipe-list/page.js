@@ -12,11 +12,11 @@ async function fetchRecipes(){
     }
 }
 export default async function RecipePage() {
-  const recipes = await fetchRecipes();
-  console.log(recipes);
+  const recipesList = await fetchRecipes();
+  console.log(recipesList);
   return (
     <div>
-      <RecipeList />
+      <RecipeList recipes = {recipesList} />
     </div>
   );
 }
